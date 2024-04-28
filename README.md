@@ -6,7 +6,7 @@ Run `make build`.
 
 On local machine project accessible via `localhost:92`. 
 
-Task 1 `http://localhost/form`
+Task 1 `http://localhost:92/form`
 
 Task 2 can be used via `docker exec -it be-7days-task-php-fpm php bin/console app:generate-summary-post`
 
