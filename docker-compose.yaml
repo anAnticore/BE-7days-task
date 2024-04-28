@@ -11,6 +11,7 @@ services:
       - "92:80"
 
   php-fpm:
+    container_name: be-7days-task-php-fpm
     build:
       context: .
       dockerfile: docker/Dockerfile
