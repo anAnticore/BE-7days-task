@@ -15,17 +15,17 @@ class Post
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private int $id;
 
     /**
      * @ORM\Column(type="string", length=100)
      */
-    private $title;
+    private ?string $title;
 
     /**
      * @ORM\Column(type="string", length=10000)
      */
-    private $content;
+    private ?string $content;
 
     public function getId(): ?int
     {
@@ -40,6 +40,7 @@ class Post
     public function setTitle(?string $title): Post
     {
         $this->title = $title;
+
         return $this;
     }
 
@@ -51,6 +52,7 @@ class Post
     public function setContent(?string $content): Post
     {
         $this->content = $content;
+
         return $this;
     }
 }

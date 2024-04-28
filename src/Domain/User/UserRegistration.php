@@ -1,10 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Domain\User;
 
 use App\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;
 
+// Ignored on scope of test task
 class UserRegistration
 {
     private EntityManagerInterface $em;

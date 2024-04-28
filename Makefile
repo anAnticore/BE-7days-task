@@ -13,14 +13,23 @@ install-database:
 	docker exec -it be-7days-task-php-fpm php bin/console app:generate-random-post
 	docker exec -it be-7days-task-php-fpm php bin/console app:generate-random-post
 
+php-cli:
+	docker exec -it be-7days-task-php-fpm bash
+
 composer:
 	docker exec -it be-7days-task-php-fpm composer install
 
 composer-update:
 	docker exec -it be-7days-task-php-fpm composer update
 
+clear-cache:
+	docker exec -it be-7days-task-php-fpm php bin/console cache:clear
+
 build:
 	docker-compose build
 	make start
 	make composer
 	make install-database
+
+phpstan:
+	docker exec -it be-7days-task-php-fpm vendor/bin/phpstan
