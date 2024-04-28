@@ -16,6 +16,9 @@ install-database:
 composer:
 	docker exec -it be-7days-task-php-fpm composer install
 
+composer-update:
+	docker exec -it be-7days-task-php-fpm composer update
+
 build:
 	docker-compose build
 	make start
