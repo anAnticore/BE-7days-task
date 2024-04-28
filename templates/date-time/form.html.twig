@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Date time zone page :: Info{% endblock %}
+
+{% block body %}
+
+    {% if (result) %}
+        The time zone {{ result.timezone }} has {{ (result.offset > 0) ? '+' : '' }}{{ result.offset }} minutes offset to UTC on the given day at noon.
+        <br />
+        February in this year is {{ result.daysInFebruary}} days long.
+        <br />
+        The specified month ({{ result.month }}) is {{ result.daysInMonth }} days long.
+        <hr />
+    {% endif %}
+
+    {{ form(form) }}
+
+{% endblock %}
